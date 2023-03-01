@@ -1,2 +1,2 @@
-# wavetecrr.github.io
-WavetecRR's Personal Website!
+# Projects
+This website is used for all my web projects.

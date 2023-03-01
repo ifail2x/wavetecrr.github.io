@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lekr.site: Free Custom URL Shortener</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Lato|PT+Sans&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <meta name="description" content="Create shortened URLs with custom paths on Lekr.site!"/>
+        <meta property="og:image" content="https://lekr.site/images/me.png"/>
+        <meta property="og:image:secure_url" content="https://lekr.site/images/me.png"/>
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="/styles/stylesheet.css">
+        <link rel="stylesheet" href="/styles/url-shortener-styles.css">
+
+        <!-- Scripts -->
+        <script>
+            document.getElementById("original-url").addEventListener("keyup", function(event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    document.getElementById("shorten-url").click();
+                }
+            });
+        </script>
+        <script src="/scripts/create-short-url.js"></script>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <a href="/"><li class="logo"><img src="/images/me.png"></li></a>
+                <a href="https://lekrkoekj.github.io/dct"><li>DiscordTech</li></a>
+                <a href="/"><li>My Projects</li></a>
+            </ul>
+        </nav>
+        <div class="top-section">
+            <center>
+                <h1 style="font-size: 50px; margin-top: 0; color: white;">Custom URL Shortener</h1>
+            </center>
+            <center><p id="error-text"></p></center>
+            <center>
+                <div style="margin-bottom: 20px;">
+                    <input placeholder="Enter the URL to shorten here." class="url-input" id="original-url">
+                    <button class="shorten-button" id="shorten-btn" onclick="CreateShortURL()">Shorten URL</button>
+                </div>
+            </center>
+            <center>
+                <div>
+                    <button disabled class="custom-url-pretext">l.lekr.site/</button>
+                    <input placeholder="Enter custom short link. (Leave empty for random)" class="url-input custom" id="custom-path">
+                </div>
+            </center>
+            <center><h2>Your short link:</h2></center>
+            <center>
+                <div style="margin-bottom: 20px;">
+                    <input placeholder="Your shortened URL will appear here." class="url-input" id="shortened-link">
+                    <button class="shorten-button" id="shorten-btn" onclick="CopyShortURL()">Copy</button>
+                </div>
+            </center>
+            <center><h2 style="color: white;">Please do not shorten malicious links! Links are moderated and bad links will be removed!</h2></center>
+        </div>
+    </body>
+</html>

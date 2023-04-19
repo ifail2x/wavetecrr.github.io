@@ -1,0 +1,20 @@
+<script>
+setInterval(function(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status != 200) {
+            document.getElementByID("normalContent").style.display = "none";
+            document.getElementByID("offlineContent").style.display = "block";
+        } else if (this.readyState == 4 && this.status == 200) {
+            document.getElementByID("normalContent").style.display = "block";
+            document.getElementByID("offlineContent").style.display = "https://wavetecrr.github.io/offline.html";
+        }
+    };
+    xhttp.open("GET", "yourpage.php", true);
+    //                      ^
+    // You also need to create an empty php file to send the request to.
+    // Name the php file whatever you want and make sure you reference it in this 
+    // script
+    xhttp.send();
+}, 1000); // <-- Request sent every second (1000 milliseconds)
+</script>

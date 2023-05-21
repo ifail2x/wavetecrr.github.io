@@ -1,6 +1,6 @@
 ## Upcoming works
 
-[Website maintainence on the 19th of July 2023](/works/19723)
+[Website maintainence on the 19th of July 2023](/works/1)
 
 ## Past works
 
